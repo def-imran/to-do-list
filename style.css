@@ -52,4 +52,19 @@ body{
     background-color:#6636ec;
     border: none;
     color:white;
+    margin-bottom: 1.5rem;
+}
+
+.display-task{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    gap:12px;
+}
+.display-div{
+    background-color: white;
+    padding:10px;
+    width:100%;
+    font-size: 15px;
+    border-radius: 15px;
 }
