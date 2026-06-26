@@ -32,7 +32,7 @@ body{
     align-items: center;
 }
 
-input{
+#task{
     display: block;
     padding: 10px;
     text-align: center;
