@@ -7,9 +7,7 @@ function addTask() {
   const taskButton = document.querySelector(".add-button");
 
   const taskDisplay = document.querySelector(".display-task");
-
-
-
+  
   taskDisplay.innerHTML = ``
 
   if (taskInput === "" || taskInput === " ") {
@@ -18,14 +16,15 @@ function addTask() {
 
   else {
     tasks.push(taskInput);
+    
   }
 
   tasks.forEach((task) => {
     taskDisplay.innerHTML += `
          <div class="display-task">
           <div class="display-div">
-            <input type="checkbox" name="task">
-            <label for="task">${task}</label>
+            <input type="checkbox" name="task" class="check">
+            <label for="task" class="task">${task}</label>
           </div>
         </div>
         `
@@ -33,4 +32,16 @@ function addTask() {
 
   console.log(tasks)
 }
+
+function checkTask(){
+  const checkBox = document.querySelector("check");
+  console.log(checkBox)
+
+  if (checkBox.checked){
+    task.textDecoration = "line-through ";
+  }
+
+}
+
+checkTask()
 
