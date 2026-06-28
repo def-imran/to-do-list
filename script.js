@@ -9,8 +9,16 @@ function addTask() {
   const taskDisplay = document.querySelector(".display-task");
 
 
-  tasks.push(taskInput);
-  taskDisplay.innerHTML=``
+
+  taskDisplay.innerHTML = ``
+
+  if (taskInput === "" || taskInput === " ") {
+    alert("Can't add empty task");
+  }
+
+  else {
+    tasks.push(taskInput);
+  }
 
   tasks.forEach((task) => {
     taskDisplay.innerHTML += `
@@ -23,9 +31,6 @@ function addTask() {
         `
   })
 
-
-
   console.log(tasks)
-
 }
 
