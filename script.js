@@ -1,6 +1,6 @@
 let tasks = [];
 
-function addTask() {
+function manageTask() {
   const inputElement = document.getElementById("task");
   const taskInput = inputElement.value;
   inputElement.value = "";
@@ -8,6 +8,8 @@ function addTask() {
 
   const taskDisplay = document.querySelector(".display-task");
 
+
+  // add task
   taskDisplay.innerHTML = ``
 
   if (taskInput === "" || taskInput === " ") {
@@ -33,6 +35,7 @@ function addTask() {
 
   console.log(tasks)
 
+  //check task
   taskDisplay.addEventListener("change", (taskChecked) => {
 
     const checkBox = taskChecked.target
@@ -47,7 +50,14 @@ function addTask() {
     }
 
   })
+
+  // delete task
+  const deleteButtons = document.querySelectorAll(".delete-btn");
+
+
 }
+
+
 
 
 
