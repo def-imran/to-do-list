@@ -1,16 +1,16 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-      background: linear-gradient(180deg, #2b0f58 0%, #123491 100%);
-      min-height: 100vh;
+body {
+    background: linear-gradient(180deg, #2b0f58 0%, #123491 100%);
+    min-height: 100vh;
 }
 
-.main-container{
-    display:flex;
+.main-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -18,21 +18,21 @@ body{
 
 }
 
-.titel-info{
+.titel-info {
     margin-top: 12rem;
     text-align: center;
-    color:white;
+    color: white;
     margin-bottom: 2.5rem;
 }
 
-.add-task{
+.add-task {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
 
-#task{
+#task {
     display: block;
     padding: 10px;
     text-align: center;
@@ -40,52 +40,63 @@ body{
     box-shadow: 0 8px 32px 0 rgba(8, 56, 187, 0.4), 0 0 15px 0 rgba(0, 241, 254, 0.5);
 }
 
-.button-div{
-    width:120px
+.button-div {
+    width: 120px
 }
 
-.add-button{
-    width:100%;
-    padding:10px;
+.add-button {
+    width: 100%;
+    padding: 10px;
     font-size: 12px;
     border-radius: 20px;
-    background-color:#6636ec;
+    background-color: #6636ec;
     border: none;
-    color:white;
+    color: white;
     margin-bottom: 1.5rem;
 }
 
-.display-task{
+.display-task {
     display: flex;
-    flex-direction: column;
-    width:200px;
-    gap:12px;
+    flex-direction: row;
+    width: 200px;
+    gap: 20px;
 }
-.display-div{
+
+.display-div {
     display: flex;
     align-items: center;
     background-color: white;
-    padding:10px;
-    width:100%;
+    padding: 10px;
+    width: 100%;
     font-size: 15px;
     border-radius: 15px;
 }
 
-.check{
+.check {
     margin-right: 5px;
 }
 
-.delete-btn{
+.delete-btn {
     margin-left: auto;
     border-radius: 10px;
-    padding:8px;
+    padding: 8px;
     font-size: 12px;
     color: white;
     background-color: #D92655;
-    border:none;
+    border: none;
     cursor: pointer;
 }
 
-.delete-btn:hover{
+.delete-btn:hover {
     background-color: #a71e43;
+}
+
+@media(max-width: 400px) {
+    .display-task {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        gap: 20px;
+    }
+
 }
