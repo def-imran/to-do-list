@@ -21,7 +21,7 @@ function addTask() {
 
   tasks.forEach((task) => {
     taskDisplay.innerHTML += `
-         <div class="display-task">
+        <div class="display-task">
           <div class="display-div">
             <input type="checkbox" name="task" class="check">
             <label for="task" class="task">${task}</label>
