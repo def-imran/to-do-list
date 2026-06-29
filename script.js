@@ -25,6 +25,7 @@ function addTask() {
           <div class="display-div">
             <input type="checkbox" name="task" class="check">
             <label for="task" class="task">${task}</label>
+            <button class="delete-btn">Delete</button>
           </div>
         </div>
         `
@@ -32,10 +33,8 @@ function addTask() {
 
   console.log(tasks)
 
-
-
   taskDisplay.addEventListener("change", (taskChecked) => {
-    
+
     const checkBox = taskChecked.target
     console.log(checkBox)
 
@@ -43,6 +42,7 @@ function addTask() {
 
     if (checkBox.classList.contains("check")) {
       taskLabel.style.textDecoration = "line-through";
+      taskLabel.style.color = "rgba(19, 18, 18, 0.69)"
 
     }
 
