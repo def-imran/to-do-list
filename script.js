@@ -1,5 +1,6 @@
 tasks = [];
 
+
 function addTask() {
   const inputElement = document.getElementById("task");
   const taskInput = inputElement.value;
@@ -7,7 +8,7 @@ function addTask() {
   const taskButton = document.querySelector(".add-button");
 
   const taskDisplay = document.querySelector(".display-task");
-  
+
   taskDisplay.innerHTML = ``
 
   if (taskInput === "" || taskInput === " ") {
@@ -16,7 +17,7 @@ function addTask() {
 
   else {
     tasks.push(taskInput);
-    
+
   }
 
   tasks.forEach((task) => {
@@ -31,17 +32,23 @@ function addTask() {
   })
 
   console.log(tasks)
+
+  const checkBoxes = document.querySelectorAll(".check");
+  const taskNames = document.querySelectorAll(".task");
+
+  taskDisplay.addEventListener("change", (taskChecked) =>{
+    checkBoxes.forEach((checkBox)=>{
+      if (checkBox.checked){
+      taskNames.forEach((taskName)=>{
+        taskName.style.textDecoration = "line-through";
+      })
+    }
+    })
+  })
 }
 
-function checkTask(){
-  const checkBox = document.querySelector("check");
-  console.log(checkBox)
 
-  if (checkBox.checked){
-    task.textDecoration = "line-through ";
-  }
 
-}
 
-checkTask()
+
 
