@@ -1,5 +1,4 @@
-tasks = [];
-
+let tasks = [];
 
 function addTask() {
   const inputElement = document.getElementById("task");
@@ -33,17 +32,20 @@ function addTask() {
 
   console.log(tasks)
 
-  const checkBoxes = document.querySelectorAll(".check");
-  const taskNames = document.querySelectorAll(".task");
 
-  taskDisplay.addEventListener("change", (taskChecked) =>{
-    checkBoxes.forEach((checkBox)=>{
-      if (checkBox.checked){
-      taskNames.forEach((taskName)=>{
-        taskName.style.textDecoration = "line-through";
-      })
+
+  taskDisplay.addEventListener("change", (taskChecked) => {
+    
+    const checkBox = taskChecked.target
+    console.log(checkBox)
+
+    const taskLabel = checkBox.nextElementSibling;
+
+    if (checkBox.classList.contains("check")) {
+      taskLabel.style.textDecoration = "line-through";
+
     }
-    })
+
   })
 }
 
