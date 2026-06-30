@@ -10,7 +10,10 @@ function manageTask() {
 
 
   // add task
+
   taskDisplay.innerHTML = ``
+
+  taskDisplay.append();
 
   if (taskInput === "" || taskInput === " ") {
     alert("Can't add empty task");
@@ -41,11 +44,11 @@ function manageTask() {
     const checkBox = taskChecked.target
     console.log(checkBox)
 
-    const taskLabel = checkBox.nextElementSibling;
+    const taskLabelCheck = checkBox.nextElementSibling;
 
     if (checkBox.classList.contains("check")) {
-      taskLabel.style.textDecoration = "line-through";
-      taskLabel.style.color = "rgba(19, 18, 18, 0.69)"
+      taskLabelCheck.style.textDecoration = "line-through";
+      taskLabelCheck.style.color = "rgba(19, 18, 18, 0.69)"
 
     }
 
@@ -54,6 +57,27 @@ function manageTask() {
   // delete task
   const deleteButtons = document.querySelectorAll(".delete-btn");
 
+  deleteButtons.forEach((deleteButton) => {
+    deleteButton.addEventListener("click", (event) => {
+      const deleteTask = event.target.parentNode;
+
+      const taskLabelDelete = deleteTask.querySelector(".task");
+
+      const taskTekst = taskLabelDelete.innerText.trim();
+      const index = tasks.indexOf(taskTekst);
+
+      if (index !== -1) {
+        tasks.splice(index, 1);
+        console.log("true")
+      }
+
+      deleteTask.remove();
+
+      console.log("task deleted");
+      console.log(tasks);
+
+    })
+  })
 
 }
 
