@@ -1,4 +1,18 @@
-let tasks = [];
+let tasks;
+
+const savedData = localStorage.getItem("taskList");
+
+if (savedData !== null){
+   tasks = JSON.parse(savedData);
+   console.log(tasks)
+}
+
+else{
+  tasks = [];
+}
+
+
+const taskDisplay = document.querySelector(".display-task");
 
 function manageTask() {
   const inputElement = document.getElementById("task");
@@ -6,7 +20,6 @@ function manageTask() {
   inputElement.value = "";
   const taskButton = document.querySelector(".add-button");
 
-  const taskDisplay = document.querySelector(".display-task");
 
 
   // add task
@@ -21,7 +34,7 @@ function manageTask() {
 
   else {
     tasks.push(taskInput);
-
+    localStorage.setItem("taskList", JSON.stringify(tasks));
   }
 
   tasks.forEach((task) => {
@@ -34,6 +47,7 @@ function manageTask() {
           </div>
         </div>
         `
+        
   })
 
   console.log(tasks)
@@ -48,7 +62,8 @@ function manageTask() {
 
     if (checkBox.classList.contains("check")) {
       taskLabelCheck.style.textDecoration = "line-through";
-      taskLabelCheck.style.color = "rgba(19, 18, 18, 0.69)"
+      taskLabelCheck.style.color = "rgba(19, 18, 18, 0.69)";
+      
 
     }
 
@@ -68,7 +83,9 @@ function manageTask() {
 
       if (index !== -1) {
         tasks.splice(index, 1);
-        console.log("true")
+        localStorage.setItem("taskList", JSON.stringify(tasks));
+        console.log("true");
+        
       }
 
       deleteTask.remove();
@@ -80,6 +97,7 @@ function manageTask() {
   })
 
 }
+
 
 
 
