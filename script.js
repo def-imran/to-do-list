@@ -2,7 +2,6 @@ let tasks = [];
 
 
 const savedData = localStorage.getItem("taskList");
-const savedDataLabel = localStorage.getItem("taskLabel");
 
 if (savedData !== null) {
   tasks = JSON.parse(savedData);
