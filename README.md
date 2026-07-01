@@ -2,10 +2,12 @@
 
 An interactive web application that allows users to add, complete, and delete tasks dynamically. The application keeps tasks synchronized across page reloads by using the browser's LocalStorage.
 
-🎯 Project Purpose
-This project was built for my portfolio to gain a solid, foundational grip on Vanilla JavaScript core concepts, state management, and DOM traversal.
+🔗 **Live Demo:** [def-imran.github.io/to-do-list/](https://def-imran.github.io/to-do-list/)
 
-🤖 AI Collaboration & Development Philosophy
+**🎯 Project Purpose**
+This project serves as a major milestone in my portfolio. After building several smaller mini-projects to master isolated coding skills, this application was developed as a larger, comprehensive project to connect all those pieces together. It marks my transition into building fully functional, state-driven web applications with a solid, foundational grip on Vanilla JavaScript.
+
+**🤖 AI Collaboration**
 This project was written and architected by me, utilizing an AI assistant as a dedicated tutor and code-reviewer rather than a code generator. 
 
 Instead of blind copy-pasting, I deliberately used AI to:
@@ -15,7 +17,7 @@ Instead of blind copy-pasting, I deliberately used AI to:
 
 Every line of code and structural decision in this project was analyzed, understood, and implemented by me.
 
-🚀 JavaScript Features & Concepts Applied
+**🚀 JavaScript Features & Concepts Applied**
 Through this project, I practiced and applied the following JavaScript techniques:
 
 * **State Synchronization & LocalStorage**: Reading and writing state arrays to the browser's storage using `JSON.stringify()` and `JSON.parse()` to persist data after page refreshes.
@@ -25,7 +27,7 @@ Through this project, I practiced and applied the following JavaScript technique
 * **Conditional UI Updates**: Validating user input against empty strings before altering state, and programmatically applying inline CSS styling (like `textDecoration = "line-through"`) based on user interaction.
 * **Template Literals & Dynamic Rendering**: Clearing and rebuilding the inner HTML structure of a container dynamically by iterating over an array with `.forEach()`.
 
-🛠️ Tech Stack
+**🛠️ Tech Stack**
 * **JavaScript (ES6+)** — Application logic, state management, LocalStorage, and DOM behavior.
 * **HTML5** — Semantic markup, input handling, and page structure.
 * **CSS3** — Component styling, layout, and visual feedback for completed tasks.
